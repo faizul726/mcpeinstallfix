@@ -1,20 +1,42 @@
-# mcpeinstallfix <Work in progress>
+# কীভাবে Minecraft app not installed সমস্যার সমাধান করবেন?
 
-Shizuku: https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api<br>
-MT Manager: https://mt2.cn/download/ (first blue link)<br><br>
+###### এই গাইডে মূলত বিভিন্ন সোর্স থেকে এপিকে ইন্সটল করার পর keep data অপশন সহকারে আনইন্সটল করলে যে ইন্সটল সংক্রান্ত জটিলতা হয় তার সমাধান করা হবে।
 
-###### others
-Terminal emulator: https://f-droid.org/repo/jackpal.androidterm_72.apk<br>
-File manager+: https://play.google.com/store/apps/details?id=com.alphainventor.filemanager&hl=en
+**Requirements:
+*** **Android 11+** ডিভাইস
+* ওয়াইফাই/হটস্পট
+* ধৈর্য্য
+* কমন সেন্স<br><br>
 
-```
-pm uninstall com.mojang.minecraftpe
-```
+###### _এই সমাধানে গড়ে ৫-১৫ মিনিট লাগবে। ক্ষেত্রবিশেষে বেশিও লাগতে পারে যদি কিছুই না বুঝেন।_
+<br>
 
-```
-cd /sdcard/mc
-```
+1. প্রথমেই প্লে স্টোর থেকে **Shizuku** অ্যাপটি ইন্সটল করুন।
 
+2. অ্যাপটি ওপেন করে Pairing এ যান।
+   - **নোটিফিকেশন পারমিশন** চাইলে অন করুন।
+   - **Developer Options** এ যান।
+   - একটু নিচে স্ক্রোল করে **USB debugging** আর **Wireless debugging** অন করুন।
+   - Wireless debugging এর **মাঝখানে** ক্লিক করুন।
+   - **Pair device with pairing code** এ যান।
+   - একটা নোটিফিকেশন আসবে Shizuku এর, Enter pairing code. **সেখানে বড় করে লেখা Wi-Fi pairing code বসায়ে সেন্ড করবেন।**
+   - পেয়ারিং ঠিক মতো হলে অ্যাপে ফেরত এসে **start** বাটন দিয়ে স্টার্ট করবেন। `যদি না হয় সেক্ষেত্রে USB debugging আর Wireless debugging অফ/অন করে নতুন করে পেয়ারিং করে আবার চেষ্টা করবেন।`
+<br>
+
+4. Use Shizuku in terminal apps এ যান।
+   - **Export files** দিয়ে আপনার সুবিধা মতো ফোল্ডার সিলেক্ট করে **Use this folder** দিন।
+<br>
+
+4. **MT Manager** ডাউনলোড করে ইন্সটল করুন।
+* অ্যাপ প্রথম ওপেনে Shizuku ইউজের পারমিশন চাইবে সেটা **allow all time** দিবেন।
+* প্রয়োজনীয় স্টোরেজ পারমিশন, EULA agreement ইত্যাদি করার পর আপনার **ওই ফোল্ডারটায় যান** যেখানে ফাইলগুলা এক্সপোর্ট করছেন।
+* উপরে ডানের কর্নারে থ্রি ডট মেনু থেকে **Open Terminal** এ যান।
+* কিছু ডাউনলোড করতে চাইলে না করবেন আর ইনফো দেখালে ক্যানসেল করবেন।
+* নিচে cd <folder location> একটা মেসেজ আসবে। **ডানদিকে OK বাটন ক্লিক করুন।**
+* এরপর এই কমান্ডগুলো এক এক করে ট্রাই করবেন।
 ```
 sh rish
+```
+```
+pm uninstall com.mojang.minecraftpe
 ```
